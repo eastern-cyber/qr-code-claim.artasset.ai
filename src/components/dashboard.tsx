@@ -142,12 +142,12 @@ export function DashboardComponent() {
                         auth: {
                           options: [
                             "google",
-                            "coinbase",
-                            "discord",
-                            "farcaster",
+                            // "coinbase",
+                            // "discord",
+                            // "farcaster",
                             "email",
                             "passkey",
-                            "guest",
+                            // "guest",
                           ]
                         },
                       })
