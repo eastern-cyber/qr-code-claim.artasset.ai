@@ -41,18 +41,21 @@ export default function Home() {
         <div className="flex itens-center space-x-2">
           {account ? (
             <>
-              <Link href="/dasboard" className="hidden sm:inline-block">
-                <Button className="text-gray-900 border-gray-400" variant="outline" size="sm">
-                  Dashboard
-                </Button> 
-              </Link>
+              {/* <Link href="/dasboard" className="hidden sm:inline-block"> */}
+                <Button className="text-gray-900 border-gray-400" variant="outline" size="sm" m-2>
+                  <Link href="/dashboard">Dashboard</Link>
+                </Button>
+                <Button onClick={() => disconnect(wallet!)} className="text-gray-900 border-gray-400" variant="outline" size="sm" m-2>
+                  Sign Out
+                </Button>
+              {/* </Link> */}
               <DropdownMenu>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem asChild>
-                    <Link href="/dashboard">Dashboard</Link>
-                  </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => disconnect(wallet!)}>
                     Sign Out
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/dashboard">Dashboard</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
