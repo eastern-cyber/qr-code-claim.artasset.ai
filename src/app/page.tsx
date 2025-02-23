@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
-import { lightTheme, useActiveAccount, useActiveWallet, useConnectModal, useDisconnect } from "thirdweb/react";
+import { darkTheme, lightTheme, useActiveAccount, useActiveWallet, useConnectModal, useDisconnect } from "thirdweb/react";
 import { client } from "./client";
 import { chain } from "./chain";
 import { inAppWallet } from "thirdweb/wallets";
@@ -18,13 +18,15 @@ export default function Home() {
     await connect ({
       client: client,
       size: "wide",
-      theme: lightTheme(),
+      theme: darkTheme(),
       chain: chain,
       wallets: [
         inAppWallet({
           auth: {
             options: [
-              "email"
+              "email",
+              "google",
+              "passkey"
             ]
           }
         })
@@ -45,7 +47,7 @@ export default function Home() {
                 <Button className="text-gray-900 border-gray-400" variant="outline" size="sm" m-2>
                   <Link href="/dashboard">Dashboard</Link>
                 </Button>
-                <Button onClick={() => disconnect(wallet!)} className="text-gray-900 border-gray-400" variant="outline" size="sm" m-2>
+                <Button onClick={() => disconnect(wallet!)} className="text-gray-100 border-gray-400 bg-gray-800" variant="outline" size="sm" m-2>
                   Sign Out
                 </Button>
               {/* </Link> */}
