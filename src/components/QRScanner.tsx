@@ -57,8 +57,10 @@ const QRScanner: React.FC = () => {
   };
 
   const onScanFailure = (error: any) => {
-    // console.warn(`Code scan error = ${error}`);
+    console.warn(`การสแกนไม่สำเร็จ: ${error}`);
+        // console.warn(`Code scan error = ${error}`);
   };
+
 
   return (
     <>
