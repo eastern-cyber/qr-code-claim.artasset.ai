@@ -6,9 +6,9 @@ const NFTs = [
     description: "3K NFT Coupon for 0x0042cDbBEE2E2c09Ce5D45F43f867E7A74022a3b",
     image:"https://i.seadn.io/s/raw/files/9d1ac97a44c746020c2b30840e985e96.png?auto=format&dpr=1&w=1000",
     attributes:{
-        shape: "triangle",
-        color: "white",
-        sides: "3",
+        type: "NFT Coupon",
+        series: "3K",
+        group: "DProject",
     },
   },
   {
@@ -16,9 +16,9 @@ const NFTs = [
     description: "ArtAsset Moto",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmPf1LhR1cXKcy2cNNnkuh4VE7SwTNjUuQ6RysADNyvws4/0.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Sport",
+        group: "Anime",
     },
   },
   {
@@ -26,9 +26,9 @@ const NFTs = [
     description: "ArtAsset Tropical Forest",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/Qme26mswCUJqXRASKBqNGdvaBufHVrKUSEJdqsvZLdtShr/1.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Natural",
+        group: "Forest",
     },
   },
   {
@@ -36,9 +36,9 @@ const NFTs = [
     description: "ArtAsset Warrior Princess",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmeJ8kK85kHTV9PRiWJ6M8yBCyiXbGfTY9vkjbFjnECHJ2/2.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Human",
+        group: "Realistic",
     },
   },
   {
@@ -46,9 +46,9 @@ const NFTs = [
     description: "ArtAsset Base Ball",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmT8T3FHzzMRF1Z27612Dn3gjLqd49FcpKYjEgwfj93bDk/3.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Sport",
+        group: "Anime",
     },
   },
   {
@@ -56,9 +56,9 @@ const NFTs = [
     description: "ArtAsset Sunset G",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmbpRsZhBpuqXYH1YVuQwdjKHZN4TGZCJeZzurBSs3gG4h/4.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Life Style",
+        group: "Anime",
     },
   },
   {
@@ -66,9 +66,9 @@ const NFTs = [
     description: "ArtAsset Sunset B",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/Qmcx3ajMDKKxdSKTKXXNrN7wchCYCvqQEWaoFKLBJurQbG/5.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Life Style",
+        group: "Anime",
     },
   },
   {
@@ -76,9 +76,9 @@ const NFTs = [
     description: "ArtAsset Buddha",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmZ3xddUv11jMZsrP5ugFGjE74gGRDWAhEm5p7N6XvksUe/6.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Cutural",
+        group: "Realistic",
     },
   },
   {
@@ -86,9 +86,9 @@ const NFTs = [
     description: "ArtAsset Basketball",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmfKTrKn8M8Wg5y8SXsAth2wuZuUWCJ6ZkcAH4Zf3ymFEF/7.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Sport",
+        group: "Anime",
     },
   },
   {
@@ -96,9 +96,9 @@ const NFTs = [
     description: "ArtAsset RainForest Jungle",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmSAaAsAuJgBtmHRSqj5BTKyoaCA1TNKYoFLC3fgyPgDLG/8.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Forest",
+        group: "Realistic",
     },
   },
   {
@@ -106,9 +106,9 @@ const NFTs = [
     description: "ArtAsset Princess",
     image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmeD7MAXNZbX8Fp571hydaWBzo9VUKJwuRrFyqD6TJrzof/9.png",
     attributes:{
-      shape: "triangle",
-      color: "blue",
-      sides: "3",
+      type: "AI Generated",
+        series: "Human",
+        group: "Realistic",
     },
   }
 ];
