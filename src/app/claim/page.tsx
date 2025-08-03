@@ -6,13 +6,13 @@ async function getData(id: string) {
         where: {
             id: id
         }
-    })
+    });
 
     if (!nft) {
-        throw new Error('NFT not found')
+        throw new Error('NFT not found');
     }
 
-    return { nft: JSON.stringify(nft) };
+    return nft; // Return the nft object directly instead of stringifying
 }
 
 export default async function ClaimPage({
@@ -20,8 +20,20 @@ export default async function ClaimPage({
 }: {
   searchParams: { id: string }
 }) {
-  const nft = JSON.parse((await getData(searchParams.id)).nft)
-  return (
-    <ClaimNft nft={nft}/>
-  )
+  if (!searchParams.id) {
+    return <div>Error: Missing NFT ID</div>;
+  }
+
+  try {
+    const nft = await getData(searchParams.id);
+    
+    return (
+      <div>
+        <ClaimNft nft={nft} />
+      </div>
+    );
+  } catch (error) {
+    console.error(error);
+    return <div>Error: {error instanceof Error ? error.message : 'Failed to load NFT'}</div>;
+  }
 }
