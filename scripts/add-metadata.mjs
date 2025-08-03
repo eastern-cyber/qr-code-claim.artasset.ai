@@ -14,7 +14,7 @@ const NFTs = [
   {
     name: "Moto",
     description: "ArtAsset Moto",
-    image:"https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmPf1LhR1cXKcy2cNNnkuh4VE7SwTNjUuQ6RysADNyvws4/0.png",
+    image:"https://i.seadn.io/s/raw/files/17a5bfc38087f9f27e33b98029afbca6.png?auto=format&dpr=1&w=1000",
     attributes:{
       type: "AI Generated",
         series: "Sport",

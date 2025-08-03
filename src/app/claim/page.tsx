@@ -16,13 +16,12 @@ async function getData(id: string) {
 }
 
 export default async function ClaimPage({
-    searchParams,
-} : {
-    searchParams: { id: string }
+  searchParams,
+}: {
+  searchParams: { id: string }
 }) {
-    const nft = JSON.parse((await getData(searchParams.id)).nft)
-
-    return (
-        <ClaimNft nft={nft}/>
-    )
+  const nft = JSON.parse((await getData(searchParams.id)).nft)
+  return (
+    <ClaimNft nft={nft}/>
+  )
 }

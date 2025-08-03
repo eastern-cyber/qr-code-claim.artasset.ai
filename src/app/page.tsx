@@ -6,7 +6,9 @@ import Link from "next/link";
 import { darkTheme, lightTheme, useActiveAccount, useActiveWallet, useConnectModal, useDisconnect } from "thirdweb/react";
 import { client } from "./client";
 import { chain } from "./chain";
-import { inAppWallet } from "thirdweb/wallets";
+// import { inAppWallet } from "thirdweb/wallets";
+import { inAppWallet, metamaskWallet, walletConnect, coinbaseWallet } from "@thirdweb-dev/react";
+
 
 export default function Home() {
   const account = useActiveAccount();
@@ -23,13 +25,12 @@ export default function Home() {
       wallets: [
         inAppWallet({
           auth: {
-            options: [
-              "email",
-              "google",
-              "passkey"
-            ]
+            options: ["email", "google", "passkey"]
           }
-        })
+        }),
+        metamaskWallet(),
+        walletConnect(),
+        coinbaseWallet(),
       ]
     })
   }
