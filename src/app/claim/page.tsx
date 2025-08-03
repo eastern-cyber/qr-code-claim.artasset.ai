@@ -1,32 +1,29 @@
 import { ClaimNft } from "@/components/claim-nft";
 import prisma from "../../../scripts/prisma.mjs";
 
-async function getData(id: string) {
-    const nft = await prisma.nFT.findUnique({
-        where: {
-            id: id
-        }
-    });
-
-    if (!nft) {
-        throw new Error('NFT not found');
-    }
-
-    return nft; // Return the nft object directly instead of stringifying
+interface NFT {
+  id: string;
+  // Add all other NFT properties here
 }
 
 export default async function ClaimPage({
   searchParams,
 }: {
-  searchParams: { id: string }
+  searchParams: { id: string };
 }) {
-  if (!searchParams.id) {
+  if (!searchParams?.id) {
     return <div>Error: Missing NFT ID</div>;
   }
 
   try {
-    const nft = await getData(searchParams.id);
-    
+    const nft = await prisma.nFT.findUnique({
+      where: { id: searchParams.id },
+    });
+
+    if (!nft) {
+      throw new Error('NFT not found');
+    }
+
     return (
       <div>
         <ClaimNft nft={nft} />
